@@ -1,0 +1,20 @@
+{% extends 'dogs/base.html' %}
+
+{% block content %}
+{% for dog in object_list %}
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <div class = "card">
+            <p>
+                {{dog.name}}
+            </p>
+            <img src="/media/{{dog.photo}}" >
+            <p>
+                {{dog.birthday}}
+            </p>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

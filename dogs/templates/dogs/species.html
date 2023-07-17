@@ -1,0 +1,9 @@
+{% extends 'dogs/base.html' %}
+{% block content %}
+    {% for species in object_list %}
+    <div class="card-body">
+        <a href="{% url 'dogs:species_list' species.id %}" type="button" class="btn btn-lg btn-block btn-outline-primary">{{species.title}}</a>
+        
+    </div>
+    {% endfor %}
+{% endblock %}

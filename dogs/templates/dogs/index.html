@@ -1,0 +1,23 @@
+{% extends 'dogs/base.html' %}
+{% block content %}
+<div class="row ">
+    {% for item in object_list %}
+    
+        <div class="col-3">
+          <div class="card">
+            <div class="card-body">
+              <p >{{ item.title|title }}</p>
+              <p >{{item.description}}</p>
+             
+              <a href="{% url 'dogs:species_list' item.id %}" type="button" class="btn btn-lg btn-link">{{item.title}}</a>
+                    
+               
+             
+            </div>
+          </div>
+        </div>
+     
+    {% endfor %}
+  </div>
+    
+{% endblock %}
